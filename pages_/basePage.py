@@ -5,7 +5,6 @@ from selenium.webdriver.support import expected_conditions as EC
 class BasePage():
     def __init__(self, driver: webdriver.Chrome):
         self.driver = driver
-        pass
 
     def _find_element(self, by, value):
         try:
@@ -21,4 +20,3 @@ class BasePage():
     def _fill_field(self, webElement, text):
         webElement.clear()
         webElement.send_keys(text)
-

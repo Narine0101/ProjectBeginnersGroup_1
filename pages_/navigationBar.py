@@ -1,23 +1,24 @@
+from time import sleep
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from basePage import BasePage
 
-
-class NavigationBar():
+class NavigationBar(BasePage):
     def __init__(self, driver):
         self.driver = driver
 
-    def click_to_cart_button(self):
-        cardbuttonElement = self.driver.find_element(By.ID, "nav-cart-count-container")
-        cardbuttonElement.click()
+    def click_search_button(self):
+        searchButtonElement = self._find_element(By. ID, "globalnav-menubutton-link-search")
+        self._click(searchButtonElement)
 
-    def click_to_search_button(self):
-        searchbuttonElement = self.driver.find_element(By.XPATH, "//input[@placeholder = 'Search Amazon']")
-        searchbuttonElement.click()
+    def fill_search_box(self, product):
+        searchBoxElement = self._find_element(By.XPATH, "//input[@placeholder='Search apple.com']")
+        searchBoxElement.clear()
+        self._fill_field(searchBoxElement, product)
+        sleep(3)
+        searchBoxElement.send_keys(Keys.ENTER)
+        sleep(3)
 
-    def send_text_to_search_box(self, search_product):
-        searchBoxElement = self.driver.find_element(By.XPATH, "//input[@placeholder = 'Search Amazon']")
-        searchBoxElement.send_keys(search_product)
-
-    def click_to_nav_search_submit(self):
-        searchSubmitElement = self.driver.find_element(By.XPATH, "//div[@class = 'nav-search-submit nav-sprite']")
-        searchSubmitElement.click()
-
+    def click_to_store_button(self):
+        storebuttonElement = self._find_element(By.XPATH, "//span[@class='globalnav-link-text-container'][1]")
+        self._click(storebuttonElement)
