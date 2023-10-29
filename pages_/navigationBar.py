@@ -1,7 +1,7 @@
 from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from basePage import BasePage
+from pages_.basePage import BasePage
 
 class NavigationBar(BasePage):
     def __init__(self, driver):

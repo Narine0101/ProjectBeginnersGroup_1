@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-from basePage import BasePage
+from pages_.basePage import BasePage
 
 
 class ShopProductPage(BasePage):

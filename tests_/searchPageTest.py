@@ -1,8 +1,8 @@
 import time
 import unittest
 from selenium import webdriver
-from navigationBar import NavigationBar
-from searchResultPage import SearchResult
+from pages_.navigationBar import NavigationBar
+from pages_.searchResultPage import SearchResult
 
 class SearchProduct(unittest.TestCase):
 
@@ -23,4 +23,4 @@ class SearchProduct(unittest.TestCase):
         time.sleep(5)
 
     def tearDown(self):
-        self.driver.close()ver.close()
+        self.driver.close()

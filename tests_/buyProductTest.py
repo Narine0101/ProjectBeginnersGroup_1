@@ -1,9 +1,9 @@
 import unittest
 from selenium import webdriver
-from navigationBar import NavigationBar
-from storePage import StorePage
-from shopProductPage import ShopProductPage
-from buyProductPage import BuyProductPage
+from pages_.navigationBar import NavigationBar
+from pages_.storPage import StorePage
+from pages_.shopProductPage import ShopProductPage
+from pages_.buyProductPage import BuyProductPage
 from time import sleep
 
 
