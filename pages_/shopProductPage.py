@@ -4,7 +4,7 @@ from pages_.basePage import BasePage
 
 
 class ShopProductPage(BasePage):
-    def init(self, driver: webdriver.Chrome):
+    def __init__(self, driver: webdriver.Chrome):
         self.driver = driver
 
     def click_to_second_product(self):

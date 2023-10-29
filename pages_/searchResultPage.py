@@ -9,6 +9,7 @@ class SearchResult(BasePage):
         self.driver = driver
 
     def click_first_result(self):
-        firstResult = self._find_element(By.CSS_SELECTOR,
-                                         ".rf-serp-explore-image[src='https://www.apple.com/autopush/ww/search/modules/airpods/image__d4v5p0w2oaky_large_2x.jpg?']")
+        # firstResult = self._find_element(By.CSS_SELECTOR,
+        #                                  ".rf-serp-explore-image[src='https://www.apple.com/autopush/ww/search/modules/airpods/image__d4v5p0w2oaky_large_2x.jpg?']")
+        firstResult = self._find_element(By.XPATH, "//h2[@data-analytics-title = 'AirPods']/../../div[1]")
         self._click(firstResult)
